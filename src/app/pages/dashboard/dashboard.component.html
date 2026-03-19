@@ -1,0 +1,9 @@
+<div class="dashboard">
+  <h1 class="app-title">Real-Time Stock App</h1>
+
+  <div class="stock-container">
+    <app-stock-card *ngFor="let stock of getStockList$ | async; trackBy: trackBySymbol;" [stock]="stock" [isMobile]="isMobile"
+      (toggle)="onToggle(stock.symbol)">
+    </app-stock-card>
+  </div>
+</div>
